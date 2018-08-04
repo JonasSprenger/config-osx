@@ -1,0 +1,38 @@
+{
+    "title": "Custom TypeMatrix",
+    "rules": [
+
+      {
+        "description": "Test to change letter by keyboard",
+        "manipulators": [
+          {
+            "conditions": [
+                {
+                  "type": "device_unless",
+                  "identifiers": [
+                    {
+                      "vendor_id": 7764
+                    }
+                  ]
+                }
+            ],
+            "type": "basic",
+            "from": {
+              "key_code": "f",
+                "modifiers": {
+                    "optional": [
+                    "any"
+                    ]
+                }
+            },
+            "to": [
+              {
+                "key_code": "o"
+              }
+            ]
+          }
+        ]
+      }
+    
+    ]
+  }
