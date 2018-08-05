@@ -1,0 +1,261 @@
+#  NOTE(koekeishiya): A list of all built-in modifier and literal keywords can
+#                     be found at https://github.com/koekeishiya/skhd/issues/1
+#
+#                     A hotkey is written according to the following rules:
+#
+#                       hotkey   = <mode> '<' <action> | <action>
+#
+#                       mode     = 'name of mode' | <mode> ',' <mode>
+#
+#                       action   = <keysym> ':' <command> | <keysym> '->' ':' <command>
+#                                  <keysym> ';' <mode>    | <keysym> '->' ';' <mode>
+#
+#                       keysym   = <mod> '-' <key> | <key>
+#
+#                       mod      = 'built-in mod keyword' | <mod> '+' <mod>
+#
+#                       key      = <literal> | <keycode>
+#
+#                       literal  = 'single letter or built-in keyword'
+#
+#                       keycode  = 'apple keyboard kVK_<Key> values (0x3C)'
+#
+#                       ->       = keypress is not consumed by skhd
+#
+#                       command  = command is executed through '$SHELL -c' and
+#                                  follows valid shell syntax. if the $SHELL environment
+#                                  variable is not set, it will default to '/bin/bash'.
+#                                  when bash is used, the ';' delimeter can be specified
+#                                  to chain commands.
+#
+#                                  to allow a command to extend into multiple lines,
+#                                  prepend '\' at the end of the previous line.
+#
+#                                  an EOL character signifies the end of the bind.
+#
+#
+#  NOTE(koekeishiya): A mode is declared according to the following rules:
+#
+#                       mode_decl = '::' <name> '@' ':' <command> | '::' <name> ':' <command> |
+#                                   '::' <name> '@'               | '::' <name>
+#
+#                       name      = desired name for this mode,
+#
+#                       @         = capture keypresses regardless of being bound to an action
+#
+#                       command  = command is executed through '$SHELL -c' and
+#                                  follows valid shell syntax. if the $SHELL environment
+#                                  variable is not set, it will default to '/bin/bash'.
+#                                  when bash is used, the ';' delimeter can be specified
+#                                  to chain commands.
+#
+#                                  to allow a command to extend into multiple lines,
+#                                  prepend '\' at the end of the previous line.
+#
+#                                  an EOL character signifies the end of the bind.
+
+# add an on_enter command to the default mode
+# :: default : chunkc border::color 0xff775759
+#
+# defines a new mode 'test' with an on_enter command, that captures keypresses
+# :: test @ : chunkc border::color 0xff24ccaa
+#
+# from 'default' mode, activate mode 'test'
+# cmd - x ; test
+#
+# from 'test' mode, activate mode 'default'
+# test < cmd - x ; default
+#
+# launch a new terminal instance when in either 'default' or 'test' mode
+# default, test < cmd - return : open -na /Applications/Terminal.app
+# 
+# * modifiers (<mod>):
+#
+# fn
+#
+# cmd
+# lcmd
+# rcmd
+# 
+# shift
+# lshift
+# rshift
+# 
+# alt
+# lalt
+# ralt
+# 
+# ctrl
+# lctrl
+# rctrl
+#
+# * key literals:
+#
+# "return"     (kVK_Return)
+# "tab"        (kVK_Tab)
+# "space"      (kVK_Space)
+# "backspace"  (kVK_Delete)
+# "escape"     (kVK_Escape)
+# 
+# The following keys can not be used with the fn-modifier:
+# 
+# "delete"     (kVK_ForwardDelete)
+# "home"       (kVK_Home)
+# "end"        (kVK_End)
+# "pageup"     (kVK_PageUp)
+# "pagedown"   (kVK_PageDown)
+# "insert"     (kVK_Help)
+# "left"       (kVK_LeftArrow)
+# "right"      (kVK_RightArrow)
+# "up"         (kVK_UpArrow)
+# "down"       (kVK_DownArrow)
+# "f1"         (kVK_F1)
+# "f2"         (kVK_F2)
+# "f3"         (kVK_F3)
+# "f4"         (kVK_F4)
+# "f5"         (kVK_F5)
+# "f6"         (kVK_F6)
+# "f7"         (kVK_F7)
+# "f8"         (kVK_F8)
+# "f9"         (kVK_F9)
+# "f10"        (kVK_F10)
+# "f11"        (kVK_F11)
+# "f12"        (kVK_F12)
+# "f13"        (kVK_F13)
+# "f14"        (kVK_F14)
+# "f15"        (kVK_F15)
+# "f16"        (kVK_F16)
+# "f17"        (kVK_F17)
+# "f18"        (kVK_F18)
+# "f19"        (kVK_F19)
+# "f20"        (kVK_F20)
+#  
+# "sound_up"          (NX_KEYTYPE_SOUND_UP)
+# "sound_down"        (NX_KEYTYPE_SOUND_DOWN)
+# "mute"              (NX_KEYTYPE_MUTE)
+# "play"              (NX_KEYTYPE_PLAY)            
+# "previous"          (NX_KEYTYPE_PREVIOUS)        
+# "next"              (NX_KEYTYPE_NEXT)
+# "rewind"            (NX_KEYTYPE_REWIND)          
+# "fast"              (NX_KEYTYPE_FAST)            
+# "brightness_up"     (NX_KEYTYPE_BRIGHTNESS_UP)
+# "brightness_down"   (NX_KEYTYPE_BRIGHTNESS_DOWN)
+# "illumination_up"   (NX_KEYTYPE_ILLUMINATION_UP) 
+# "illumination_down" (NX_KEYTYPE_ILLUMINATION_DOWN)
+# 
+# hyper (cmd + shift + alt + ctrl)
+#
+# meh (shift + alt + ctrl)
+
+# Cycle through all the windows of a desktop
+alt - 0x0A : ~/.chunkwm.d/cycle-through-all-window-of-desktop.py
+
+# enter fullscreen mode for the focused container
+cmd - 0x0A : chunkc tiling::window --toggle fullscreen
+
+# kill focused window
+#shift + alt - q : chunkc tiling::window --close
+
+# change focus
+cmd - left : chunkc tiling::window --focus west
+cmd - right : chunkc tiling::window --focus east
+cmd - up : chunkc tiling::window --focus north
+cmd - down : chunkc tiling::window --focus south
+ 
+#cmd - 0x13 : chunkc tiling::window --focus prev
+cmd - 0x16 : chunkc tiling::window --focus next
+
+# swap window
+cmd + rshift - left : chunkc tiling::window --swap west
+cmd + rshift - down : chunkc tiling::window --swap south
+cmd + rshift - up : chunkc tiling::window --swap north
+cmd + rshift - right : chunkc tiling::window --swap east
+
+# toggle window parent zoom
+cmd - home : chunkc tiling::window --toggle parent
+
+# toggle window split type
+cmd - end : chunkc tiling::window --toggle split
+
+# mirror tree y-axis
+cmd + alt - home : chunkc tiling::desktop --mirror vertical
+
+# mirror tree x-axis
+cmd + alt - end : chunkc tiling::desktop --mirror horizontal
+
+# rotate tree
+#cmd - home : chunkc tiling::desktop --rotate 90
+
+# move focused window
+cmd + alt - left : chunkc tiling::window --warp west
+cmd + alt - right : chunkc tiling::window --warp east
+cmd + alt - up : chunkc tiling::window --warp north
+cmd + alt - down : chunkc tiling::window --warp south
+
+# increase region size
+cmd + lctrl - left : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west
+cmd + lctrl - right : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east
+cmd + lctrl - up : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge north
+cmd + lctrl - down : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south
+
+# decrease region size
+cmd + lctrl + alt - left : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west
+cmd + lctrl + alt - right : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east
+cmd + lctrl + alt - up : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north
+cmd + lctrl + alt - down : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south
+
+# ############ Floating ##########
+
+# change focus between tiling / floating windows
+cmd - 0x15 : chunkc tiling::window --toggle float;\
+chunkc tiling::window --grid-layout 4:4:1:1:2:2
+
+# make floating window fill screen
+alt - 0x0A : chunkc tiling::window --grid-layout 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+cmd + alt + lshift - left : chunkc tiling::window --grid-layout 1:2:0:0:1:1
+
+# make floating window fill right-half of screen
+cmd + alt + lshift - right : chunkc tiling::window --grid-layout 1:2:1:0:1:1
+
+# make floating window fill middle of the screen of screen vertically
+cmd + alt + lshift - up : chunkc tiling::window --grid-layout 1:4:1:0:2:1
+
+# float next window to be tiled
+#cmd - 0x16 : chunkc set window_float_next 1    #???
+
+# ############ Desktop ############ 
+
+# Focus desktop
+cmd - 0x12 : chunkc tiling::desktop --focus 1
+cmd - 0x13 : chunkc tiling::desktop --focus 2
+cmd - 0x14 : chunkc tiling::desktop --focus 3
+cmd - f1 : chunkc tiling::desktop --focus 4
+cmd - f2 : chunkc tiling::desktop --focus 5
+
+# move focused container to workspace
+cmd + alt - 0x12 : chunkc tiling::window --send-to-desktop 1
+cmd + alt - 0x13 : chunkc tiling::window --send-to-desktop 2
+cmd + alt - 0x14 : chunkc tiling::window --send-to-desktop 3
+cmd + alt - f1 : chunkc tiling::window --send-to-desktop 4
+cmd + alt - f2 : chunkc tiling::window --send-to-desktop 5
+#cmd - : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
+#cmd - : chunkc tiling::window --send-to-desktop prev
+#cmd - : chunkc tiling::window --send-to-desktop next
+
+# move focused container to desktop and follow focus
+cmd + lshift - 0x12 : chunkc tiling::window --send-to-desktop 1; chunkc tiling::desktop --focus 1
+cmd + lshift - 0x13 : chunkc tiling::window --send-to-desktop 2; chunkc tiling::desktop --focus 2
+cmd + lshift - 0x14 : chunkc tiling::window --send-to-desktop 3; chunkc tiling::desktop --focus 3
+cmd + lshift - f1 : chunkc tiling::window --send-to-desktop 4; chunkc tiling::desktop --focus 4
+cmd + lshift - f2 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::desktop --focus 5
+
+# Create desktop
+cmd + alt + lshift - f1 : chunkc tiling::desktop --create
+
+# change layout of desktop
+#cmd - 4 : chunkc tiling::desktop --layout bsp
+#cmd - down : chunkc tiling::desktop --layout bsp
+#cmd - 5 : chunkc tiling::desktop --layout monocle
+#cmd - up : chunkc tiling::desktop --layout monocle
