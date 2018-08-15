@@ -21,6 +21,9 @@ chunkc core::unload border.so
 # NOTE: the following are config variables for the chunkwm-tiling plugin.
 #
 
+chunkc set window_float_topmost 0
+chunkc set window_use_cgs_move 1
+
 chunkc set global_desktop_mode           bsp
 
 chunkc set global_desktop_offset_top     0 
@@ -32,17 +35,15 @@ chunkc set global_desktop_offset_gap     0
 chunkc set desktop_padding_step_size     10.0
 chunkc set desktop_gap_step_size         5.0
 
-chunkc set bsp_spawn_left                1
-chunkc set bsp_optimal_ratio             1.618
-chunkc set bsp_split_mode                optimal
-chunkc set bsp_split_ratio               0.5
+#chunkc set bsp_spawn_left                1
+#chunkc set bsp_optimal_ratio             1.618
+#chunkc set bsp_split_mode                optimal
+#chunkc set bsp_split_ratio               0.5
 
 chunkc set monitor_focus_cycle           1
 chunkc set window_focus_cycle            monitor
 
-chunkc set mouse_follows_focus           1
-chunkc set window_float_next             1
-chunkc set window_float_center           1
+chunkc set mouse_follows_focus           off    # off | intrinsic | all
 chunkc set window_region_locked          1
 
 chunkc set mouse_modifier                fn
@@ -65,13 +66,25 @@ chunkc set focused_border_width          1
 chunkc set focused_border_radius         2
 chunkc set focused_border_skip_floating  0
 
-# Fading
+# ############# Fading ###########
 
 chunkc set window_fade_inactive 1
 chunkc set window_fade_duration 0
 chunkc set window_fade_alpha 0.95
 
-
+# ############# Loading plugings #############
 chunkc core::load border.so
 chunkc core::load tiling.so
-chunkc core::load ffm.so
+#chunkc core::load ffm.so
+
+# ############# window rules #################
+# (must be after tiling plugin loading!)
+
+chunkc tiling::rule --owner "IntelliJ IDEA" --except "(^.*\[.*$|^$)" --state float --grid-layout 18:32:1:1:30:16 #Regex notes: contains '['' or nothing (for the menus)
+#chunkc tiling::rule --owner iTerm2 --role AXWindow --subrole AXStandardWindow --name "2. jsprenger@macbookpro-237: ~ (zsh)" --state float
+#chunkc tiling::rule --owner Finder --name Recents --state float
+#chunkc tiling::rule --role AXWindow --subrole AXStandardWindow --owner "IntelliJ IDEA" --name "CfdCrawler.scala (/Users/jsprenger/Perso/Dev/XCA_MVP/xcaimporter/crawler/src/main/scala/com/xca/crawler/cfd)" --state float
+#chunkc tiling::rule --owner IntelliJ IDEA --state float
+#  --grid-layout 4:4:2:3:1:3
+
+chunkc tiling::rule --owner TextEdit --state float

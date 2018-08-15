@@ -178,10 +178,10 @@ cmd - home : chunkc tiling::window --toggle parent
 cmd - end : chunkc tiling::window --toggle split
 
 # mirror tree y-axis
-cmd + alt - home : chunkc tiling::desktop --mirror vertical
+cmd + alt - end : chunkc tiling::desktop --mirror vertical
 
 # mirror tree x-axis
-cmd + alt - end : chunkc tiling::desktop --mirror horizontal
+cmd + alt - home : chunkc tiling::desktop --mirror horizontal
 
 # rotate tree
 #cmd - home : chunkc tiling::desktop --rotate 90
@@ -199,10 +199,10 @@ cmd + lctrl - up : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-wind
 cmd + lctrl - down : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south
 
 # decrease region size
-cmd + lctrl + alt - left : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west
-cmd + lctrl + alt - right : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east
-cmd + lctrl + alt - up : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north
-cmd + lctrl + alt - down : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south
+cmd + lctrl + alt - left : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east
+cmd + lctrl + alt - right : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west
+cmd + lctrl + alt - up : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south
+cmd + lctrl + alt - down : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north
 
 # ############ Floating ##########
 
@@ -253,6 +253,11 @@ cmd + lshift - f2 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::de
 
 # Create desktop
 cmd + alt + lshift - f1 : chunkc tiling::desktop --create
+
+# # change layout of desktop
+# ctrl + alt - a : chunkc tiling::desktop --layout bsp
+# ctrl + alt - s : chunkc tiling::desktop --layout monocle
+# ctrl + alt - d : chunkc tiling::desktop --layout float
 
 # change layout of desktop
 #cmd - 4 : chunkc tiling::desktop --layout bsp
