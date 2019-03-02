@@ -38,6 +38,11 @@ export PATH=/Users/jsprenger/Bin/scala-2.12.6/bin:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Fuckin env JS
+  export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
 # Aliases
 
 ## zsh
@@ -46,6 +51,7 @@ alias reload="source ~/.zshrc"
 ## cd
 alias bd="/Users/jsprenger/Lizeo/Dev/BD4M/bd4m"
 alias ref="/Users/jsprenger/Lizeo/Dev/BD4M/refsync"
+alias xca="/Users/jsprenger/Perso/Dev/XCA_MVP/xcaimporter"
 
 ## git
 alias gs="git status"
@@ -58,6 +64,7 @@ alias gl="git lola"
 alias gll="git lol"
 alias gp="git push"
 alias gP="git push --force-with-lease"
+alias gpUp="git push --set-upstream origin HEAD"
 alias gcaa="git commit --add --amend"
 alias gc="git commit"
 alias gco="git checkout"
@@ -73,3 +80,11 @@ alias drmal="docker rm $(docker ps -aq)"
 alias drmall="docker rm $(docker ps -qf Status=exited)"
 alias drmallI="docker rmi -f $(docker images -q)"
 alias dinfo="docker inspect --format '{{\"ENV: \"}}{{join .Config.Env \" | \"}}{{\"\\nCMD: \"}}{{join .Config.Cmd \" | \"}}'"
+
+## Python lib for AWS
+export PATH=/Users/jsprenger/Library/Python/2.7/bin:$PATH
+
+### NPM ###
+export PATH=/usr/local/Cellar/node/10.8.0/libexec/bin:$PATH
+
+export PATH=/Users/jsprenger/.local/bin:$PATH
