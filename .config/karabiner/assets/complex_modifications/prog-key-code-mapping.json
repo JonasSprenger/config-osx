@@ -8,7 +8,7 @@
           "type": "basic",
           "from": {
             "key_code": "q",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -20,7 +20,7 @@
           "type": "basic",
           "from": {
             "key_code": "w",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -32,7 +32,7 @@
           "type": "basic",
           "from": {
             "key_code": "e",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -44,7 +44,7 @@
           "type": "basic",
           "from": {
             "key_code": "r",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -56,7 +56,7 @@
           "type": "basic",
           "from": {
             "key_code": "t",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -69,7 +69,7 @@
           "type": "basic",
           "from": {
             "key_code": "a",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -81,7 +81,7 @@
           "type": "basic",
           "from": {
             "key_code": "s",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -93,7 +93,7 @@
           "type": "basic",
           "from": {
             "key_code": "d",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -105,7 +105,7 @@
           "type": "basic",
           "from": {
             "key_code": "f",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -117,7 +117,7 @@
           "type": "basic",
           "from": {
             "key_code": "g",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -130,7 +130,7 @@
           "type": "basic",
           "from": {
             "key_code": "z",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": []
         },
@@ -138,7 +138,7 @@
           "type": "basic",
           "from": {
             "key_code": "x",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": []
         },
@@ -146,7 +146,7 @@
           "type": "basic",
           "from": {
             "key_code": "c",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": []
         },
@@ -154,7 +154,7 @@
           "type": "basic",
           "from": {
             "key_code": "v",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": []
         },
@@ -162,7 +162,7 @@
           "type": "basic",
           "from": {
             "key_code": "b",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -180,7 +180,7 @@
           "type": "basic",
           "from": {
             "key_code": "y",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -192,7 +192,7 @@
           "type": "basic",
           "from": {
             "key_code": "u",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -204,7 +204,7 @@
           "type": "basic",
           "from": {
             "key_code": "i",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -216,7 +216,7 @@
           "type": "basic",
           "from": {
             "key_code": "o",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -228,7 +228,7 @@
           "type": "basic",
           "from": {
             "key_code": "p",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -241,7 +241,7 @@
           "type": "basic",
           "from": {
             "key_code": "h",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -253,7 +253,7 @@
           "type": "basic",
           "from": {
             "key_code": "j",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -265,7 +265,7 @@
           "type": "basic",
           "from": {
             "key_code": "k",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -277,7 +277,7 @@
           "type": "basic",
           "from": {
             "key_code": "l",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -289,7 +289,7 @@
           "type": "basic",
           "from": {
             "key_code": "semicolon",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -302,7 +302,7 @@
           "type": "basic",
           "from": {
             "key_code": "n",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -314,7 +314,7 @@
           "type": "basic",
           "from": {
             "key_code": "m",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -326,7 +326,7 @@
           "type": "basic",
           "from": {
             "key_code": "comma",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -338,7 +338,7 @@
           "type": "basic",
           "from": {
             "key_code": "period",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -350,7 +350,7 @@
           "type": "basic",
           "from": {
             "key_code": "slash",
-            "modifiers":{ "mandatory":["fn"]}
+            "modifiers":{ "mandatory":["fn"], "optional": ["any"]}
           },
           "to": [
             {
@@ -421,6 +421,19 @@
           "type": "basic",
           "from": {
             "key_code": "backslash",
+            "modifiers":{"optional": ["any"]}
+          },
+          "to":[]
+        }
+      ]
+    },
+    {
+      "description": "Disable / Modify top row",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
             "modifiers":{"optional": ["any"]}
           },
           "to":[]
