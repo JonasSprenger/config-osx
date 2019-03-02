@@ -8,8 +8,11 @@
 * `~/.antigen/`
 
 ## Keyboard
-* `~/.config/karabiner/assets/`
-* `/Library/Keyboard\ Layouts` | `~/Perso/Config/Ukelele/`
+* Karabiner (keycode)
+    * `~/.config/karabiner/karabiner.json`
+    * `~/.config/karabiner/assets/*.json`
+* Ukelele (characters)
+    * `/Library/Keyboard\ Layouts` | `~/Perso/Config/Ukelele/`
 
 ## Editor / IDE
 * `Library/Application Support/Code/User/`
