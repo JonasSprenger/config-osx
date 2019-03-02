@@ -132,11 +132,7 @@
             "key_code": "z",
             "modifiers":{ "mandatory":["fn"]}
           },
-          "to": [
-            {
-      	      "key_code": "separator"
-            }
-          ]
+          "to": []
         },
         {
           "type": "basic",
@@ -144,11 +140,7 @@
             "key_code": "x",
             "modifiers":{ "mandatory":["fn"]}
           },
-          "to": [
-            {
-      	      "key_code": "1"
-            }
-          ]
+          "to": []
         },
         {
           "type": "basic",
@@ -156,11 +148,7 @@
             "key_code": "c",
             "modifiers":{ "mandatory":["fn"]}
           },
-          "to": [
-            {
-      	      "key_code": "5"
-            }
-          ]
+          "to": []
         },
         {
           "type": "basic",
@@ -168,11 +156,7 @@
             "key_code": "v",
             "modifiers":{ "mandatory":["fn"]}
           },
-          "to": [
-            {
-      	      "key_code": "6"
-            }
-          ]
+          "to": []
         },
         {
           "type": "basic",
@@ -346,7 +330,7 @@
           },
           "to": [
             {
-      	      "key_code": "insert"
+      	      "key_code": "keypad_comma"
             }
           ]
         },
