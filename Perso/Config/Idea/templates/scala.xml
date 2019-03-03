@@ -1,0 +1,41 @@
+<templateSet group="scala">
+  <template name="pr" value="println" description="println" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="priv" value="println(s&quot;-----------------------------------------------&quot;)" description="Template for expressions output" toReformat="false" toShortenFQNames="false">
+    <context />
+  </template>
+  <template name="T" value="&lt;$TAG$&gt;$SELECTION$&lt;/$TAGNAME$&gt;&#10;" description="Surround with &lt;tag&gt;&lt;/tag&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TAGNAME" expression="firstWord(TAG)" defaultValue="&quot;&quot;" alwaysStopAt="false" />
+    <context />
+  </template>
+  <template name="sep" value="println(&quot;----------------TITI---------------------------&quot;)" description="Print separator" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="in" value="&quot;$TEXT$&quot; in {&#10;  $END$&#10;}" description="scalaTest" toReformat="true" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="log" value="protected val log = LoggerFactory.getLogger(getClass)&#10;" description="Create new slf4j logger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="spec" value="class MyTestSpec&#10;  extends WordSpec&#10;    with Matchers&#10;    with ScalaFutures {&#10;    &quot;My Test suite&quot; should {&#10;      &quot;work&quot; when {&#10;        &quot;given good code&quot; in {&#10;          &quot;Hello&quot; shouldEqual &quot;Hello&quot;&#10;        }&#10;      }&#10;    }&#10;}" description="WordSpec" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="SCALA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="impEc" value="import scala.concurrent.ExecutionContext.Implicits.global" description="import ExecutionContext global" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
