@@ -18,6 +18,7 @@ sudo cp My_Custom.keylayout /Library/Keyboard\ Layouts
 - Attach the icon from `Keyboard` menu or with a right click.
 - Save the bundle
 - Export as `*.dmg` for install all layout of the bundle
+- The files are created in `~/Library/Keyboard Layouts`
 
 # TODO: Try to install it directly with `Ukelele`
 
