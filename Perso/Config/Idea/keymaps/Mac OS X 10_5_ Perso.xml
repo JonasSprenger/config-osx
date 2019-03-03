@@ -197,6 +197,10 @@
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="shift meta o" />
   </action>
+  <action id="GotoTest">
+    <keyboard-shortcut first-keystroke="shift meta t" />
+    <mouse-shortcut keystroke="meta button2" />
+  </action>
   <action id="GotoTypeDeclaration">
     <mouse-shortcut keystroke="meta button2" />
   </action>
@@ -251,21 +255,10 @@
   <action id="QuickList.Default">
     <keyboard-shortcut first-keystroke="meta j" />
   </action>
-  <action id="RecentChangedFiles">
-    <keyboard-shortcut first-keystroke="alt o_with_circumflex" />
-  </action>
-  <action id="RecentChanges">
-    <keyboard-shortcut first-keystroke="f5" />
-  </action>
-  <action id="RecentFiles">
-    <keyboard-shortcut first-keystroke="o_with_circumflex" />
-  </action>
   <action id="ReformatCode" />
   <action id="RenameElement">
     <keyboard-shortcut first-keystroke="6" />
   </action>
-  <action id="ResizeToolWindowLeft" />
-  <action id="ResizeToolWindowRight" />
   <action id="RestoreDefaultLayout" />
   <action id="Resume">
     <keyboard-shortcut first-keystroke="meta alt r" />
