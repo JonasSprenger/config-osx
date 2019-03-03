@@ -54,6 +54,7 @@
   <action id="EditSource">
     <keyboard-shortcut first-keystroke="meta enter" />
   </action>
+  <action id="EditorChooseLookupItem" />
   <action id="EditorCloneCaretAbove">
     <keyboard-shortcut first-keystroke="alt page_up" />
   </action>
@@ -207,6 +208,7 @@
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="shift meta close_bracket" />
   </action>
+  <action id="OpenElementInNewWindow" />
   <action id="OptimizeImports">
     <keyboard-shortcut first-keystroke="ctrl alt o" />
     <keyboard-shortcut first-keystroke="meta i" />
@@ -264,6 +266,7 @@
   <action id="ShelvedChanges.Rename">
     <keyboard-shortcut first-keystroke="shift f6" />
   </action>
+  <action id="ShowBookmarks" />
   <action id="ShowSettings">
     <keyboard-shortcut first-keystroke="f6" />
     <keyboard-shortcut first-keystroke="ctrl meta p" />
@@ -285,6 +288,7 @@
   <action id="StepOver" />
   <action id="Switcher" />
   <action id="ToggleBookmark" />
+  <action id="ToggleBookmarkWithMnemonic" />
   <action id="ToggleDistractionFreeMode">
     <keyboard-shortcut first-keystroke="f2" />
   </action>
@@ -307,6 +311,10 @@
   </action>
   <action id="Vcs.ShowMessageHistory">
     <keyboard-shortcut first-keystroke="ctrl m" />
+  </action>
+  <action id="ViewSource" />
+  <action id="WelcomeScreen.OpenSelected">
+    <keyboard-shortcut first-keystroke="shift enter" />
   </action>
   <action id="WelcomeScreen.Settings">
     <keyboard-shortcut first-keystroke="f4" />
