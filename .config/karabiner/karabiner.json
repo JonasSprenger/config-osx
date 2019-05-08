@@ -317,6 +317,22 @@
                             "to": {
                                 "key_code": "left_command"
                             }
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_0"
+                            },
+                            "to": {
+                                "key_code": "delete_or_backspace"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_period"
+                            },
+                            "to": {
+                                "key_code": "delete_forward"
+                            }
                         }
                     ]
                 }
