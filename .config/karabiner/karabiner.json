@@ -301,7 +301,24 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": {
+                                "key_code": "left_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": {
+                                "key_code": "left_command"
+                            }
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
@@ -403,7 +420,7 @@
                 }
             ],
             "name": "ProgLayout",
-            "selected": false,
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": {
@@ -1434,7 +1451,7 @@
                 }
             ],
             "name": "ProgKeyCode",
-            "selected": true,
+            "selected": false,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0
