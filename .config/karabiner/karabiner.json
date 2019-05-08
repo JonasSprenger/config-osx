@@ -214,6 +214,51 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "FN + home/end => home/end + option + shift",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "keypad_1",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "home",
+                                        "modifiers": [
+                                            "right_option",
+                                            "right_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "keypad_3",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "end",
+                                        "modifiers": [
+                                            "right_option",
+                                            "right_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },

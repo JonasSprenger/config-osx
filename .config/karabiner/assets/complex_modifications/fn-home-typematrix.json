@@ -1,0 +1,52 @@
+{
+    "title": "Typematrix home/end with FN",
+    "rules": [
+      
+      {
+        "description": "FN + home/end => home/end + option + shift",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "keypad_1",
+              "modifiers": {
+                "optional": [
+                  "any"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "home",
+                "modifiers": [
+                  "right_option",
+                  "right_shift"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "keypad_3",
+              "modifiers": {
+                "optional": [
+                  "any"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "end",
+                "modifiers": [
+                  "right_option",
+                  "right_shift"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+
+    ]
+}  
