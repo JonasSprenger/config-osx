@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Jonas SPRENGER
+	name = Jonas Sprenger
 	email = sprengerjo@gmail.com
 
 [alias]
@@ -10,3 +10,5 @@ lg = !"git lg1"
 lol = log --graph --oneline --decorate
 lola = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
 ll = log --color --graph --all --oneline --pretty=format:'%C(purple)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[core]
+	autocrlf = input

@@ -7,7 +7,6 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-antigen bundle heroku
 antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
@@ -34,9 +33,6 @@ source /Users/jsprenger/.antigen/perso/perso.zsh-theme
 export PATH=/Users/jsprenger/Bin/confluent-4.1.1/bin:$PATH
 export PATH=/Users/jsprenger/Bin/scala-2.12.6/bin:$PATH
 
-# pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # Fuckin env JS
   export NVM_DIR="$HOME/.nvm"
@@ -51,7 +47,7 @@ alias reload="source ~/.zshrc"
 ## cd
 alias bd="/Users/jsprenger/Lizeo/Dev/BD4M/bd4m"
 alias ref="/Users/jsprenger/Lizeo/Dev/BD4M/refsync"
-alias xca="/Users/jsprenger/Perso/Dev/XCA_MVP/xcaimporter"
+alias xca="/Users/jsprenger/Perso/Dev/XCA_MVP/xca"
 
 ## git
 alias gs="git status"
@@ -88,3 +84,10 @@ export PATH=/Users/jsprenger/Library/Python/2.7/bin:$PATH
 export PATH=/usr/local/Cellar/node/10.8.0/libexec/bin:$PATH
 
 export PATH=/Users/jsprenger/.local/bin:$PATH
+
+### JVM ###
+#export PATH="$HOME/.jenv/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"

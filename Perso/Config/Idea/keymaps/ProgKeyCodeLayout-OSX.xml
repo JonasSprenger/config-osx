@@ -29,16 +29,16 @@
     <keyboard-shortcut first-keystroke="meta e_with_acute" />
   </action>
   <action id="ChangesView.GroupBy.Directory" />
-  <action id="CheckinProject">
-    <keyboard-shortcut first-keystroke="alt o" />
-    <keyboard-shortcut first-keystroke="meta g" second-keystroke="c" />
-  </action>
+  <action id="ChangesView.SetDefault" />
+  <action id="CheckinProject" />
   <action id="ChooseRunConfiguration">
     <keyboard-shortcut first-keystroke="alt f12" />
   </action>
+  <action id="ClassNameCompletion">
+    <keyboard-shortcut first-keystroke="ctrl space" />
+  </action>
   <action id="CodeCompletion">
-    <keyboard-shortcut first-keystroke="alt e_with_grave" />
-    <keyboard-shortcut first-keystroke="alt space" />
+    <keyboard-shortcut first-keystroke="ctrl alt space" />
   </action>
   <action id="CodeInspection.OnEditor" />
   <action id="CommentByBlockComment">
@@ -56,10 +56,10 @@
   <action id="Diff.FocusOppositePane" />
   <action id="Diff.FocusOppositePaneAndScroll" />
   <action id="Diff.NextChange">
-    <keyboard-shortcut first-keystroke="shift meta close_bracket" />
+    <keyboard-shortcut first-keystroke="alt u_with_grave" />
   </action>
   <action id="Diff.PrevChange">
-    <keyboard-shortcut first-keystroke="shift meta open_bracket" />
+    <keyboard-shortcut first-keystroke="alt 1" />
   </action>
   <action id="DirDiffMenu.SynchronizeDiff" />
   <action id="DuplicatesForm.SendToLeft" />
@@ -79,7 +79,21 @@
   <action id="EditorCloneCaretBelow">
     <keyboard-shortcut first-keystroke="alt page_down" />
   </action>
-  <action id="EditorCodeBlockEnd" />
+  <action id="EditorCodeBlockEnd">
+    <keyboard-shortcut first-keystroke="ctrl alt down" />
+  </action>
+  <action id="EditorCodeBlockEndWithSelection">
+    <keyboard-shortcut first-keystroke="shift meta alt close_bracket" />
+    <keyboard-shortcut first-keystroke="shift ctrl alt down" />
+  </action>
+  <action id="EditorCodeBlockStart">
+    <keyboard-shortcut first-keystroke="meta alt open_bracket" />
+    <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="EditorCodeBlockStartWithSelection">
+    <keyboard-shortcut first-keystroke="shift meta alt open_bracket" />
+    <keyboard-shortcut first-keystroke="shift ctrl alt up" />
+  </action>
   <action id="EditorDecreaseFontSize">
     <keyboard-shortcut first-keystroke="meta alt l" />
   </action>
@@ -132,9 +146,6 @@
   <action id="EditorPreviousWordInDifferentHumpsModeWithSelection">
     <keyboard-shortcut first-keystroke="shift ctrl left" />
   </action>
-  <action id="EditorSelectLine">
-    <keyboard-shortcut first-keystroke="ctrl alt down" />
-  </action>
   <action id="EditorSelectWord">
     <keyboard-shortcut first-keystroke="alt down" />
   </action>
@@ -152,6 +163,13 @@
   </action>
   <action id="EmmetNextEditPoint" />
   <action id="EmmetPreviousEditPoint" />
+  <action id="ExecuteInPyConsoleAction">
+    <keyboard-shortcut first-keystroke="f10" />
+  </action>
+  <action id="ExpressionTypeInfo">
+    <keyboard-shortcut first-keystroke="meta p" />
+    <keyboard-shortcut first-keystroke="e_with_circumflex" />
+  </action>
   <action id="ExternalSystem.RunTask">
     <keyboard-shortcut first-keystroke="f9" />
   </action>
@@ -164,24 +182,20 @@
   </action>
   <action id="FindInPath">
     <keyboard-shortcut first-keystroke="7" />
-    <keyboard-shortcut first-keystroke="meta p" />
+    <keyboard-shortcut first-keystroke="u_with_grave" />
   </action>
   <action id="FindNext" />
   <action id="FindUsages">
     <keyboard-shortcut first-keystroke="alt f7" />
     <mouse-shortcut keystroke="alt button3" />
   </action>
-  <action id="FindUsagesInFile">
-    <keyboard-shortcut first-keystroke="meta f7" />
-    <mouse-shortcut keystroke="shift button1" />
-  </action>
   <action id="Forward">
     <mouse-shortcut keystroke="button5" />
     <keyboard-shortcut first-keystroke="e_with_acute" />
   </action>
   <action id="Git.Commit.And.Push.Executor" />
-  <action id="Git.Rebase">
-    <keyboard-shortcut first-keystroke="meta g" second-keystroke="r" />
+  <action id="Git.Menu">
+    <keyboard-shortcut first-keystroke="meta g" />
   </action>
   <action id="Git.Reword.Commit">
     <keyboard-shortcut first-keystroke="shift f6" />
@@ -189,6 +203,7 @@
   <action id="GotoAction">
     <keyboard-shortcut first-keystroke="meta l" />
   </action>
+  <action id="GotoBookmark1" />
   <action id="GotoChangedFile" />
   <action id="GotoClass">
     <keyboard-shortcut first-keystroke="meta j" />
@@ -204,13 +219,25 @@
     <mouse-shortcut keystroke="meta alt button1" />
   </action>
   <action id="GotoLine" />
-  <action id="GotoNextError" />
+  <action id="GotoNextElementUnderCaretUsage" />
+  <action id="GotoNextError">
+    <keyboard-shortcut first-keystroke="ctrl u_with_grave" />
+  </action>
+  <action id="GotoPrevElementUnderCaretUsage" />
+  <action id="GotoPreviousError">
+    <keyboard-shortcut first-keystroke="ctrl 1" />
+  </action>
   <action id="GotoSuperMethod" />
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="meta h" />
   </action>
+  <action id="GotoTest">
+    <keyboard-shortcut first-keystroke="shift meta t" />
+    <mouse-shortcut keystroke="alt button1" />
+  </action>
   <action id="GotoTypeDeclaration">
     <mouse-shortcut keystroke="meta button2" />
+    <mouse-shortcut keystroke="shift meta button1" />
   </action>
   <action id="HideAllWindows">
     <keyboard-shortcut first-keystroke="f1" />
@@ -244,7 +271,9 @@
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="ctrl alt right" />
   </action>
-  <action id="ParameterInfo" />
+  <action id="ParameterInfo">
+    <keyboard-shortcut first-keystroke="shift meta p" />
+  </action>
   <action id="PinActiveTab">
     <keyboard-shortcut first-keystroke="meta t" />
   </action>
@@ -252,6 +281,12 @@
   <action id="PreviousEditorTab" />
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="ctrl alt left" />
+  </action>
+  <action id="PyRunFileInConsole">
+    <keyboard-shortcut first-keystroke="shift f10" />
+  </action>
+  <action id="QuickEvaluateExpression">
+    <keyboard-shortcut first-keystroke="meta alt f8" />
   </action>
   <action id="QuickImplementations">
     <keyboard-shortcut first-keystroke="meta y" />
@@ -287,24 +322,31 @@
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="f11" />
   </action>
+  <action id="Scala.ExpandImplicits">
+    <keyboard-shortcut first-keystroke="shift ctrl alt equals" />
+    <keyboard-shortcut first-keystroke="shift ctrl alt add" />
+  </action>
   <action id="Scala.NewScalaWorksheet">
     <keyboard-shortcut first-keystroke="f8" />
   </action>
   <action id="Scala.RenameJavaToScala" />
   <action id="Scala.RunWorksheet" />
+  <action id="Scala.ShowImplicitArguments" />
   <action id="Scala.ShowImplicits">
     <keyboard-shortcut first-keystroke="shift ctrl alt equals" />
     <keyboard-shortcut first-keystroke="shift ctrl alt add" />
   </action>
   <action id="Scala.TypeInfo">
-    <keyboard-shortcut first-keystroke="shift ctrl p" />
+    <keyboard-shortcut first-keystroke="meta p" />
     <keyboard-shortcut first-keystroke="e_with_circumflex" />
   </action>
   <action id="ScalaFmtFormat">
     <keyboard-shortcut first-keystroke="meta e" />
   </action>
   <action id="ShelvedChanges.Rename" />
-  <action id="ShowBookmarks" />
+  <action id="ShowBookmarks">
+    <keyboard-shortcut first-keystroke="alt f4" />
+  </action>
   <action id="ShowPopupMenu">
     <keyboard-shortcut first-keystroke="meta circumflex" />
   </action>
@@ -317,8 +359,7 @@
     <mouse-shortcut keystroke="meta button3" />
   </action>
   <action id="SmartTypeCompletion">
-    <keyboard-shortcut first-keystroke="e_with_grave" />
-    <keyboard-shortcut first-keystroke="ctrl alt space" />
+    <keyboard-shortcut first-keystroke="alt space" />
   </action>
   <action id="SplitHorizontally">
     <keyboard-shortcut first-keystroke="ctrl h" />
@@ -331,7 +372,9 @@
   <action id="Switcher" />
   <action id="TodoViewGroupByShowModules" />
   <action id="TodoViewGroupByShowPackages" />
-  <action id="ToggleBookmark" />
+  <action id="ToggleBookmark">
+    <keyboard-shortcut first-keystroke="f4" />
+  </action>
   <action id="ToggleBookmarkWithMnemonic" />
   <action id="TogglePresentationMode">
     <keyboard-shortcut first-keystroke="meta alt f2" />
@@ -360,20 +403,25 @@
     <keyboard-shortcut first-keystroke="ctrl m" />
   </action>
   <action id="Vcs.UpdateProject" />
+  <action id="VcsShowNextChangeMarker" />
+  <action id="VcsShowPrevChangeMarker" />
   <action id="ViewSource" />
-  <action id="WelcomeScreen.Settings">
-    <keyboard-shortcut first-keystroke="f4" />
-  </action>
   <action id="XDebugger.EditWatch" />
   <action id="XDebugger.JumpToSource">
     <keyboard-shortcut first-keystroke="meta down" />
   </action>
   <action id="XDebugger.SetValue" />
-  <action id="de.netnexus.CamelCasePlugin.ToggleCamelCase" />
+  <action id="ZoomCurrentWindow">
+    <keyboard-shortcut first-keystroke="meta b" />
+  </action>
+  <action id="de.netnexus.CamelCasePlugin.ToggleCamelCase">
+    <keyboard-shortcut first-keystroke="meta u" />
+  </action>
   <action id="emacsIDEAs.AceJump" />
   <action id="emacsIDEAs.AceJumpWord">
     <keyboard-shortcut first-keystroke="alt 7" />
   </action>
+  <action id="osmedile.intellij.stringmanip.PopupChoiceAction" />
   <action id="refactoring.extract.dependency" />
   <action id="tasks.goto" />
 </keymap>
