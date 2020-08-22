@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Jonas SPRENGER
-	email = sprengerjo@gmail.com
+	name = jsprenger
+	email = jonas.sprenger@lizeo-group.com
 
 [alias]
 lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all

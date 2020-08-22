@@ -1,9 +1,9 @@
 # fpath=(/usr/local/share/zsh-completions $fpath)
-source /usr/local/share/antigen/antigen.zsh
+ source /usr/local/share/antigen/antigen.zsh # COMMENTED
 # source /Users/jsprenger/App/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+antigen use oh-my-zsh # COMMENTED
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
@@ -12,22 +12,22 @@ antigen bundle lein
 antigen bundle command-not-found
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+#antigen bundle zsh-users/zsh-syntax-highlighting
 
 # For Docker auto-completion
 antigen bundle "greymd/docker-zsh-completion"
 
 # Load the theme.
-#antigen theme bira
+antigen theme bira
 
 # Tell Antigen that you're done.
 antigen apply
 
 source /Users/jsprenger/.antigen/perso/perso.zsh-theme
 
-#fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/completion $fpath)
 
-#autoload -Uz compinit && compinit -i
+autoload -Uz compinit && compinit -i
 
 # PATH
 export PATH=/Users/jsprenger/Bin/confluent-4.1.1/bin:$PATH
@@ -86,8 +86,16 @@ export PATH=/usr/local/Cellar/node/10.8.0/libexec/bin:$PATH
 export PATH=/Users/jsprenger/.local/bin:$PATH
 
 ### JVM ###
-#export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
 
 # pyenv
 eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true

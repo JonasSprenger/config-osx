@@ -1,7 +1,3 @@
 {
-    "metals.serverVersion": "SNAPSHOT",
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 1,
-    "python.jediEnabled": false,
-    "python.dataScience.askForKernelRestart": false
+    "editor.minimap.enabled": false
 }
